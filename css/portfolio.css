@@ -120,11 +120,21 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .link.current{
+    position: relative;    
     color: var(--hover-color);
-    background-image:url(../img/hover.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 4px;
-    background-position: bottom;
+}
+
+.link.current::after{
+    display: block;
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--hover-color);
 }
 
 .contacts-nav .item:not(:first-child){
@@ -182,9 +192,41 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 
-.portfolio .main-title,
-.project .description{
+.portfolio .main-title{
     display: none;
+}
+
+.project .description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--background-primary);
+    
+    opacity: 0;
+}
+
+.project .card-info{
+    position: relative;
+}
+
+.card-info::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    opacity: 0;
+}
+
+.project .item:hover .card-info::before,
+.project .item:hover .card-info .description{
+    opacity: 1;
 }
 
 .container .nav-menu{
@@ -286,7 +328,7 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--primary-text-color);
 }
 
-.project .description{
+/* .project .description{
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
@@ -294,10 +336,10 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--primary-text-color);
 }
 
-.project .description:hover{
+/* .project .description:hover{
     color: var(--background-primary);
     background-color: var(--hover-color);
-}
+} */
 
 .footer {
     background-color: var(--footer-background-site);
