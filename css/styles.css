@@ -123,6 +123,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 .link.current{
     color: var(--hover-color);
+    background-image:url(../img/hover.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background-position: bottom;
 }
 
 .contacts-nav .item:not(:first-child){
@@ -290,6 +294,11 @@ h1, h2, h3, h4, h5, h6, p{
     margin-top: 50px;
 }
 
+.type-works .item{
+    position: relative;
+    display: block;
+}
+
 .type-works img{
     display: block;
 }
@@ -299,11 +308,13 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .type-works .description{
+    position: absolute;
+    bottom: 0;
+    
     display: flex;
     width: 370px;
-    /* height: 70px; */
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 27px;
+    padding-bottom: 27px;
     align-items: center;
     justify-content: center;
     

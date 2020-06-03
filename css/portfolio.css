@@ -121,6 +121,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 .link.current{
     color: var(--hover-color);
+    background-image:url(../img/hover.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background-position: bottom;
 }
 
 .contacts-nav .item:not(:first-child){
