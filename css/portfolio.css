@@ -215,12 +215,16 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--background-primary);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     opacity: 0;
 }
 
 .project .card-info{
     position: relative;
+    overflow: hidden;
 }
 
 .card-info::before{
@@ -230,12 +234,16 @@ h1, h2, h3, h4, h5, h6, p{
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
 
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     opacity: 0;
 }
 
 .project .item:hover .card-info::before,
 .project .item:hover .card-info .description{
     opacity: 1;
+    transform: translateY(0);
 }
 
 .container .nav-menu{

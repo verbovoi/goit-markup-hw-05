@@ -241,8 +241,8 @@ h1, h2, h3, h4, h5, h6, p{
 /* Наши преимущества */
 .advantage{
     padding-top: 94px;
-    padding-bottom: 94px;
-    border: 1px solid #ECECEC;
+    /* padding-bottom: 94px;
+    border: 1px solid #ECECEC; */
 }
 
 .advantage .title{
